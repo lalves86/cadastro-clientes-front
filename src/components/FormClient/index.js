@@ -43,57 +43,58 @@ function FormClient({ data, edited }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={name}
-          onChange={handleEditName}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="address">Endereço</label>
-        <input
-          type="text"
-          name="address"
-          id="address"
-          value={address}
-          onChange={handeEditAddress}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="phone">Telefone</label>
-        <input
-          type="number"
-          name="phone"
-          id="phone"
-          value={phone}
-          onChange={handleEditPhone}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="status">Status</label>
-        <select
-          type="text"
-          name="status"
-          id="status"
-          value={status}
-          onChange={handleEditStatus}
-          required
-        >
-          <option value="">== Selecione ==</option>
-          <option value="ativo">Ativo</option>
-          <option value="excluído">Excluído</option>
-          <option value="inativo">Inativo</option>
-        </select>
-      </div>
-      <button type="submit">Alterar</button>
-    </form>
+    <>
+      <h3>Alterar o cadastro do cliente</h3>
+      <form onSubmit={handleSubmit} className="formclient">
+        <div>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={handleEditName}
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            value={address}
+            onChange={handeEditAddress}
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            value={phone}
+            onChange={handleEditPhone}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="status">Status</label>
+          <select
+            type="text"
+            name="status"
+            id="status"
+            value={status}
+            onChange={handleEditStatus}
+            required
+          >
+            <option value="">== Selecione ==</option>
+            <option value="ativo">Ativo</option>
+            <option value="excluído">Excluído</option>
+            <option value="inativo">Inativo</option>
+          </select>
+        </div>
+        <button type="submit">Alterar</button>
+      </form>
+    </>
   );
 }
 

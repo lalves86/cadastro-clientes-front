@@ -88,4 +88,17 @@ export default createGlobalStyle`
       margin: 5px;
     }
   }
+
+  .formclient {
+    label {
+      margin-right: 3px;
+    }
+
+    button {
+      border: 1px solid #FC9C7C;
+      border-radius: 4px;
+      text-decoration: none;
+      padding: 2px;
+    }
+  }
 `;

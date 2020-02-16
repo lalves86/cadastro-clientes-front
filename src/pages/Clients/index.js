@@ -29,7 +29,7 @@ class Clients extends Component {
   };
 
   // Permite a edição de clientes
-  handleEditClient = id => {
+  handleEditClient = async id => {
     this.setState({ edit: true });
 
     this.loadClients();
