@@ -4,6 +4,7 @@ import api from '../../services/api';
 
 import Client from '../../components/Client';
 import Form from '../../components/Form';
+import ExportExcel from '../../components/ExcelExport';
 
 /*
   Esta classe retorna os clientes cadastrados no banco de dados ao carregar.
@@ -46,7 +47,12 @@ class Clients extends Component {
     const { clients, edit } = this.state;
     return (
       <div>
-        <h1>Listagem de Clientes</h1>
+        <div className="header">
+          <h1>Listagem de Clientes</h1>
+          <button type="button">
+            <ExportExcel data={clients} />
+          </button>
+        </div>
         <div className="container">
           <div className="aside">
             <h2>Cadastrar novo cliente</h2>

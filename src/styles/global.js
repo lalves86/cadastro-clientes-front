@@ -34,6 +34,18 @@ export default createGlobalStyle`
     text-align: center;
   }
 
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+      border: 1px solid #FC9C7C;
+      border-radius: 4px;
+      text-decoration: none;
+      padding: 10px;
+    }
+  }
+
   .container {
     margin: 20px;
     display: flex;
